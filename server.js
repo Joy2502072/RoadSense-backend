@@ -583,11 +583,9 @@ app.get("/api/reports/:id", (req, res) => {
 // START SERVER
 // ==========================================
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
-app.listen(
-    PORT,
-    () => {
+app.listen(PORT, "0.0.0.0", () => {
 
         console.log(
             `RoadSense Backend running on http://localhost:${PORT}`
